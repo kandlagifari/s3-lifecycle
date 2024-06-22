@@ -1,0 +1,30 @@
+{
+    "Rules": [
+        {
+            "ID": "ExampleRule",
+            "Filter": {"Prefix": ""},
+            "Status": "Enabled",
+            "Transitions": [
+                {
+                    "Days": 30,
+                    "StorageClass": "GLACIER"
+                }
+            ],
+            "Expiration": {
+                "Days": 365
+            },
+            "NoncurrentVersionTransitions": [
+                {
+                    "NoncurrentDays": 30,
+                    "StorageClass": "GLACIER"
+                }
+            ],
+            "NoncurrentVersionExpiration": {
+                "NoncurrentDays": 365
+            },
+            "AbortIncompleteMultipartUpload": {
+                "DaysAfterInitiation": 7
+            }
+        }
+    ]
+}
